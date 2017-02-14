@@ -1,0 +1,19 @@
+{
+  "name": "jwars",
+  "version": "0.0.1",
+  "description": "mmoJS",
+  "main": "servWar.js",
+  "scripts": {
+    "start": "node server/servWar.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jesus Enrique Perez Toledo",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "express": "^4.14.1",
+    "socket.io": "^1.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
