@@ -4,7 +4,7 @@
   "description": "mmoJS",
   "main": "servWar.js",
   "scripts": {
-    "start": "node Node.js",
+    "start": "node server/servWar.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jesus Enrique Perez Toledo",
