@@ -8,8 +8,8 @@ var userid = 0;
     id : userid,
     name : "admin",
     color : "#000000",
-    x : 0,
-    y : 0
+    x : 30,
+    y : 30
   }];
 
  var mensajes = [{
