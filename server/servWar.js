@@ -82,8 +82,8 @@ function valSend(listPlayers){
 function indexId(id){
   index = 0;
   players.forEach(function(data, i){
-    if(id = data.id){
-      index = 1;
+    if(id == data.id){
+      index = i;
     }
   });
   return index;

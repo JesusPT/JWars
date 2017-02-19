@@ -4,10 +4,11 @@ var move;
 $(document).ready(function(){
   sCC.emit('join',user);
   sCC.on('accept',function(id){
+    console.log(id);
     iduser = id;
   });
   document.addEventListener("keydown",function(e){
-    // console.log(e);
+    console.log(e);
     direction="";
     if(e.key == "ArrowDown"){
       // console.log("Abajo");
@@ -42,6 +43,7 @@ $(document).ready(function(){
       }
       sCC.emit('move',move);
     }
+
   });
 
 });
