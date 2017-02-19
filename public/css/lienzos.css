@@ -1,0 +1,8 @@
+canvas{
+  position: absolute;;
+  margin: 0 auto;
+}
+
+#terreno{
+  z-index: -1;
+}
