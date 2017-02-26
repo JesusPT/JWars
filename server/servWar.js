@@ -45,18 +45,19 @@ io.on('connection',function(socket){
     console.log("Nuevo Usuario ->" + userid);
     console.log("Total usuario -> " + players.length);
     io.sockets.emit('newPlayer',valSend(players));
+    listaDeJugdores();
   });
 
   socket.on('move',function(data){
     console.log("Usuario " + data.id + " se mueve a " + data.dir);
     index = indexId(data.id);
-    if(data.dir=="up"){
+    if(data.dir=="u"){
       players[index].y-=5;
-    }else if(data.dir=="down"){
+    }else if(data.dir=="d"){
       players[index].y+=5;
-    }else if(data.dir=="left"){
+    }else if(data.dir=="l"){
       players[index].x-=5;
-    }else if(data.dir=="right"){
+    }else if(data.dir=="r"){
       players[index].x+=5;
     }else{
       console.log("error de movimiento " + data.dir + " usuario " + data.id);
@@ -77,6 +78,14 @@ function valSend(listPlayers){
     });
   });
   return poscol;
+}
+
+function listaDeJugdores(){
+  console.log("------------------------------------------------");
+  players.forEach(function(data, i){
+    console.log("Usuario " + data.id);
+  });
+  console.log("------------------------------------------------");
 }
 
 function indexId(id){

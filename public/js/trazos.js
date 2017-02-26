@@ -3,7 +3,7 @@ $(document).ready(function(){
   ter = $('#terreno')[0];
   ctx = can.getContext('2d');
   ctxTer = ter.getContext('2d');
-  console.log(ter);
+  // console.log(ter);
   var pasto = new Image();
   var piedra = new Image();
   pasto.src = "../res/PastoPlano(Ver. 1.0.5).png";
@@ -16,7 +16,7 @@ $(document).ready(function(){
   });
 
   sCC.on('update',function(data){
-    console.log("update");
+    // console.log("update");
     renderP(data);
   });
 
