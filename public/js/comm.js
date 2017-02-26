@@ -1,4 +1,4 @@
-var sCC = io.connect('http://localhost:8080',{'forceNew':true});
+var sCC = io.connect('http://app-24c8997d-778a-4b9a-8188-ab2addd01058.cleverapps.io/',{'forceNew':true});
 
 sCC.on('msg',function(data){
   render(data);
