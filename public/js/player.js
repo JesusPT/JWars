@@ -68,7 +68,7 @@ $(document).ready(function(){
         }
       break;
       case 'd':
-        if(fnMoveR == undefined && fnMoveL == undefined){
+        if(fnMoveR == undefined && fnMoveL == un){
           fnMoveR = setInterval(rigthM,60)
         }
       break;
@@ -112,6 +112,7 @@ $(document).ready(function(){
 
 
   $(document).on('keyup',function(e){
+    console.log(e.key);
     switch (e.key){
       case 'w':
         clearInterval(fnMoveU);
@@ -130,7 +131,7 @@ $(document).ready(function(){
         fnMoveR = undefined;
       break;
       default:
-        console.log(e.key);
+        console.log("#");
       break;
     }
   });
