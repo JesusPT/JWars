@@ -52,13 +52,30 @@ io.on('connection',function(socket){
     console.log("Usuario " + data.id + " se mueve a " + data.dir);
     index = indexId(data.id);
     if(data.dir=="u"){
-      players[index].y-=5;
+      if(players[index].y > 5){
+        players[index].y-=5;
+      }else{
+        players[index].y = 5;
+      }
     }else if(data.dir=="d"){
-      players[index].y+=5;
+      if(players[index].y < 260){
+        players[index].y+=5;
+      }else{
+        players[index].y = 260;
+      }
     }else if(data.dir=="l"){
-      players[index].x-=5;
+      if(players[index].x > 6){
+        players[index].x-=5;
+      }else{
+        players[index].x = 6;
+      }
     }else if(data.dir=="r"){
-      players[index].x+=5;
+      console.log(players[index].x);
+      if(players[index].x < 260){
+        players[index].x+=5;
+      }else{
+        players[index].x = 260
+      }
     }else{
       console.log("error de movimiento " + data.dir + " usuario " + data.id);
     }
